@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Foodie Dashboard</a>
+        <div class="nav-links">
+            <a href="dashboard.html" style="color:var(--primary)">Customers</a>
+            <a href="index.html">Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="loading-spinner" class="spinner"></div>
+        <div id="toast-container"></div>
+        
+        <h2>Manage Customers</h2>
+        <div class="card" style="margin-top: 2rem; overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="customers-list">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Foodie Delivery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

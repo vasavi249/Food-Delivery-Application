@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
+		"name": "Food Delivery API Collection",
+		"description": "API Collection for the Food Delivery Application.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"url": { "raw": "http://127.0.0.1:8000/customers/", "protocol": "http", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["customers", ""] }
+					}
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [ { "key": "Content-Type", "value": "application/json" } ],
+						"body": { "mode": "raw", "raw": "{\"full_name\": \"Test User\", \"email\": \"test@test.com\", \"phone\": \"1234567890\", \"address\": \"Street 1\", \"city\": \"Delhi\"}" },
+						"url": { "raw": "http://127.0.0.1:8000/customers/add/", "protocol": "http", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["customers", "add", ""] }
+					}
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get All Restaurants",
+					"request": {
+						"method": "GET",
+						"url": { "raw": "http://127.0.0.1:8000/restaurants/", "protocol": "http", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["restaurants", ""] }
+					}
+				},
+				{
+					"name": "Add Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [ { "key": "Content-Type", "value": "application/json" } ],
+						"body": { "mode": "raw", "raw": "{\"restaurant_name\": \"New Place\", \"owner_name\": \"John Doe\", \"location\": \"Mumbai\", \"cuisine\": \"Italian\", \"rating\": 4.5, \"image_url\": \"\"}" },
+						"url": { "raw": "http://127.0.0.1:8000/restaurants/add/", "protocol": "http", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["restaurants", "add", ""] }
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App - Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Foodie</a>
+        <div class="nav-links">
+            <a href="restaurants.html">Restaurants</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html" style="color:var(--primary)">Cart</a>
+            <a href="orders.html">Orders</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="loading-spinner" class="spinner"></div>
+        <div id="toast-container"></div>
+        
+        <h2>Your Cart</h2>
+        <div class="card" style="margin-top: 2rem;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+            <div style="text-align: right; margin-top: 1.5rem;">
+                <h3>Grand Total: <span id="cart-total" style="color:var(--primary)">₹0.00</span></h3>
+                <button class="btn btn-primary" style="margin-top: 1rem; padding: 1rem 2rem; font-size: 1.1rem" onclick="initiateCheckout()">Pay with PhonePe</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PhonePe Mock Modal -->
+    <div id="phonepe-modal" class="modal-overlay">
+        <div class="phonepe-modal">
+            <h2 style="color: #5f259f; font-weight: 800; margin-bottom:10px">पे PhonePe</h2>
+            <div id="qr-section">
+                <p>Scan to pay <strong><span id="phonepe-amount">₹0.00</span></strong></p>
+                <div class="qr-code"></div>
+                <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:15px">Or click below to simulate successful payment</p>
+                <div style="display:flex; justify-content:center; gap:10px">
+                    <button class="btn" style="background:#eee" onclick="cancelPayment()">Cancel</button>
+                    <button class="btn" style="background:#5f259f; color:white" onclick="processPayment()">Simulate Payment</button>
+                </div>
+            </div>
+            
+            <div id="loader-section" style="display:none">
+                <div class="payment-loader" style="display:block"><div></div></div>
+                <h3 style="color:#5f259f; margin-top:10px">Processing Payment...</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem">Please do not close this window</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Foodie Delivery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

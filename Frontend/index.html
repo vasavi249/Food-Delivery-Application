@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App - Home</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <style>
+        .category-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        .category-item {
+            min-width: 120px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .category-item:hover { transform: translateY(-5px); }
+        .category-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .hero-search {
+            background: white;
+            padding: 5px;
+            border-radius: 50px;
+            display: flex;
+            max-width: 500px;
+            margin: 20px auto 0 auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .hero-search input {
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            width: 100%;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        .hero-search button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Promo Banner Styles */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2a2a2a 100%);
+            border-radius: 30px;
+            margin: 5rem 0 3rem 0;
+            padding: 3rem 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .promo-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+        .promo-content {
+            max-width: 50%;
+            position: relative;
+            z-index: 2;
+        }
+        .promo-content h2 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .promo-content p {
+            color: #d0d0d0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .app-buttons { display: flex; gap: 15px; }
+        .app-btn {
+            background: white;
+            color: var(--secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.3s;
+        }
+        .app-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .promo-image { max-width: 45%; position: relative; z-index: 2; }
+        .promo-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: rotate(2deg);
+            transition: transform 0.3s;
+        }
+        .promo-banner:hover .promo-image img { transform: rotate(0deg) scale(1.02); }
+        @media (max-width: 768px) {
+            .promo-banner { flex-direction: column; text-align: center; padding: 2rem; }
+            .promo-content, .promo-image { max-width: 100%; }
+            .promo-image { margin-top: 2rem; }
+            .app-buttons { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Foodie</a>
+        <div class="nav-links">
+            <a href="restaurants.html">Restaurants</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html">Orders</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="btn btn-primary" style="color:white; padding: 0.6rem 1.5rem; border-radius: 25px;">Sign In</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Discover the best food & drinks in your city</h1>
+        <p>Explore top-rated restaurants, exclusive menus, and blazing fast delivery.</p>
+        <div class="hero-search">
+            <input type="text" id="hero-search-input" placeholder="Search for restaurant, cuisine or a dish..." onkeypress="if(event.key === 'Enter') handleHeroSearch()">
+            <button onclick="handleHeroSearch()">Search</button>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 0;">
+        <div id="loading-spinner" class="spinner"></div>
+        <div id="toast-container"></div>
+        
+        <h2 style="font-size: 1.8rem; margin-top: 1rem;">What's on your mind?</h2>
+        <div class="category-scroll">
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Biryani">
+                <h4>Biryani</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Pizza">
+                <h4>Pizza</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Burger">
+                <h4>Burger</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=200&q=80" class="category-img" alt="North Indian">
+                <h4>North Indian</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Desserts">
+                <h4>Desserts</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Snacks">
+                <h4>Snacks</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=200&q=80" class="category-img" alt="South Indian">
+                <h4>South Indian</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Chinese">
+                <h4>Chinese</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Beverages">
+                <h4>Beverages</h4>
+            </div>
+            <div class="category-item" onclick="window.location.href='menu.html'">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=200&q=80" class="category-img" alt="Healthy">
+                <h4>Healthy</h4>
+            </div>
+        </div>
+
+        <h2 style="font-size: 1.8rem; margin-top: 3rem;">Top Brands for you</h2>
+        <div class="grid" id="restaurants-grid">
+            <!-- Populated by JS -->
+        </div>
+
+        <h2 style="font-size: 1.8rem; margin-top: 4rem;">Popular Dishes near you</h2>
+        <div class="grid" id="featured-menu-grid">
+            <!-- Populated by JS -->
+        </div>
+
+        <!-- Attractive Promo Banner Section -->
+        <div class="promo-banner">
+            <div class="promo-content">
+                <h2>Get the Foodie App</h2>
+                <p>Enjoy exclusive discounts, real-time order tracking, and blazing fast delivery directly from your phone. Download now and get 20% off your first order!</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">🍎 App Store</a>
+                    <a href="#" class="app-btn">▶️ Google Play</a>
+                </div>
+            </div>
+            <div class="promo-image">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Delicious Food App">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Foodie Delivery. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js?v=2"></script>
+</body>
+</html>
