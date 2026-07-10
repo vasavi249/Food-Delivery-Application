@@ -4,12 +4,24 @@
         {
             "src": "Backend/fooddelivery/wsgi.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "Frontend/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/(customers|restaurants|foods|cart|orders|admin)/(.*)",
             "dest": "Backend/fooddelivery/wsgi.py"
+        },
+        {
+            "src": "/(customers|restaurants|foods|cart|orders|admin)",
+            "dest": "Backend/fooddelivery/wsgi.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "Frontend/$1"
         }
     ]
 }

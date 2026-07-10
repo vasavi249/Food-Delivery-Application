@@ -1,5 +1,6 @@
-const BASE_URL = 'http://127.0.0.1:8000';
-
+// Connect to the deployed Vercel Backend on the exact same domain
+const BASE_URL = ''; // Empty string means it will hit the same domain (Vercel)
+// const BASE_URL = 'http://127.0.0.1:8000'; // Uncomment this to test locally again
 function showToast(message) {
     const container = document.getElementById('toast-container');
     if (!container) return;
