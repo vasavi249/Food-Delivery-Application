@@ -71,7 +71,7 @@ def populate():
     Food.objects.create(restaurant_name="Burger Joint", food_name="Classic Cheeseburger", category="Burger", price=200, availability="Available", image_url="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80")
     Food.objects.create(restaurant_name="Burger Joint", food_name="Double Patty Burger", category="Burger", price=350, availability="Available", image_url="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80")
     Food.objects.create(restaurant_name="Burger Joint", food_name="French Fries", category="Sides", price=99, availability="Available", image_url="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80")
-    Food.objects.create(restaurant_name="Burger Joint", food_name="Chocolate Shake", category="Beverages", price=120, availability="Out of Stock", image_url="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80")
+    Food.objects.create(restaurant_name="Burger Joint", food_name="Chocolate Shake", category="Beverages", price=120, availability="Out of Stock", image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Chocolate_milkshake.jpg/400px-Chocolate_milkshake.jpg")
 
     # Sushi Zen
     Food.objects.create(restaurant_name="Sushi Zen", food_name="Salmon Sushi Roll", category="Main Course", price=450, availability="Available", image_url="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80")
