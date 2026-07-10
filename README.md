@@ -52,8 +52,17 @@ A complete, production-ready Full Stack Food Delivery Application exactly matchi
 4. Link to GitHub: `git remote add origin <your-github-repo-url>`
 5. Push: `git push -u origin master`
 
-![alt text](<Screenshot 2026-07-10 161926.png>)
-![alt text](<Screenshot 2026-07-10 161900-1.png>)
-![alt text](<Screenshot 2026-07-10 154316-2.png>)
-![alt text](<Screenshot 2026-07-10 154232-1.png>)
-![alt text](<Screenshot 2026-07-10 163906.png>)
+## Screenshots
+
+### Application UI
+![UI 1](<Screenshot 2026-07-10 161926.png>)
+![UI 2](<Screenshot 2026-07-10 161900-1.png>)
+![UI 3](<Screenshot 2026-07-10 154316-2.png>)
+![UI 4](<Screenshot 2026-07-10 154232-1.png>)
+![UI 5](<Screenshot 2026-07-10 163906.png>)
+
+### API & Database Testing
+![Testing 1](image-4.png)
+![Testing 2](image-5.png)
+![Testing 3](image-6.png)
+![Testing 4](image-7.png)
