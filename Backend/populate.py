@@ -71,7 +71,7 @@ def populate():
     Food.objects.create(restaurant_name="Burger Joint", food_name="Classic Cheeseburger", category="Burger", price=200, availability="Available", image_url="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80")
     Food.objects.create(restaurant_name="Burger Joint", food_name="Double Patty Burger", category="Burger", price=350, availability="Available", image_url="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80")
     Food.objects.create(restaurant_name="Burger Joint", food_name="French Fries", category="Sides", price=99, availability="Available", image_url="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80")
-    Food.objects.create(restaurant_name="Burger Joint", food_name="Chocolate Shake", category="Beverages", price=120, availability="Out of Stock", image_url="https://loremflickr.com/600/400/shake,chocolate")
+    Food.objects.create(restaurant_name="Burger Joint", food_name="Chocolate Shake", category="Beverages", price=120, availability="Out of Stock", image_url="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80")
 
     # Sushi Zen
     Food.objects.create(restaurant_name="Sushi Zen", food_name="Salmon Sushi Roll", category="Main Course", price=450, availability="Available", image_url="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80")
@@ -82,16 +82,16 @@ def populate():
     Food.objects.create(restaurant_name="Taco Fiesta", food_name="Nachos with Guacamole", category="Sides", price=180, availability="Available", image_url="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=600&q=80")
 
     # The French Bakery
-    Food.objects.create(restaurant_name="The French Bakery", food_name="Chocolate Croissant", category="Desserts", price=120, availability="Available", image_url="https://loremflickr.com/600/400/croissant")
+    Food.objects.create(restaurant_name="The French Bakery", food_name="Chocolate Croissant", category="Desserts", price=120, availability="Available", image_url="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80")
     Food.objects.create(restaurant_name="The French Bakery", food_name="Macarons Box", category="Desserts", price=300, availability="Available", image_url="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=80")
 
     # Healthy Bites
     Food.objects.create(restaurant_name="Healthy Bites", food_name="Avocado Quinoa Salad", category="Vegetarian", price=280, availability="Available", image_url="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80")
-    Food.objects.create(restaurant_name="Healthy Bites", food_name="Green Detox Smoothie", category="Beverages", price=150, availability="Available", image_url="https://loremflickr.com/600/400/smoothie")
+    Food.objects.create(restaurant_name="Healthy Bites", food_name="Green Detox Smoothie", category="Beverages", price=150, availability="Available", image_url="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80")
 
     # Curry House
     Food.objects.create(restaurant_name="Curry House", food_name="Butter Chicken", category="Main Course", price=350, availability="Available", image_url="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80")
-    Food.objects.create(restaurant_name="Curry House", food_name="Garlic Naan", category="Sides", price=60, availability="Available", image_url="https://loremflickr.com/600/400/naan")
+    Food.objects.create(restaurant_name="Curry House", food_name="Garlic Naan", category="Sides", price=60, availability="Available", image_url="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80")
 
     print("Adding to Cart...")
     Cart.objects.create(customer_name="Rahul Sharma", food_name="Chicken Dum Biryani", quantity=2, price=299)
