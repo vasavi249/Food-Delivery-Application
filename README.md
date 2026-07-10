@@ -57,3 +57,9 @@ A complete, production-ready Full Stack Food Delivery Application exactly matchi
 ![alt text](<Screenshot 2026-07-10 154316-2.png>)
 ![alt text](<Screenshot 2026-07-10 154232-1.png>)
 ![alt text](<Screenshot 2026-07-10 163906.png>)
+
+## Postman API Testing URLs
+Here are some of the API endpoints tested in Postman:
+- **Delete Customer:** `DELETE http://127.0.0.1:8000/customers/delete/<id>/`
+- **Add Customer:** `POST http://127.0.0.1:8000/customers/add/`
+- **Get All Restaurants:** `GET http://127.0.0.1:8000/restaurants/`
