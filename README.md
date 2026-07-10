@@ -55,14 +55,14 @@ A complete, production-ready Full Stack Food Delivery Application exactly matchi
 ## Screenshots
 
 ### Application UI
-![UI 1](<Screenshot 2026-07-10 161926.png>)
-![UI 2](<Screenshot 2026-07-10 161900-1.png>)
-![UI 3](<Screenshot 2026-07-10 154316-2.png>)
-![UI 4](<Screenshot 2026-07-10 154232-1.png>)
-![UI 5](<Screenshot 2026-07-10 163906.png>)
+![UI 1](assets/Screenshot%202026-07-10%20161926.png)
+![UI 2](assets/Screenshot%202026-07-10%20161900-1.png)
+![UI 3](assets/Screenshot%202026-07-10%20154316-2.png)
+![UI 4](assets/Screenshot%202026-07-10%20154232-1.png)
+![UI 5](assets/Screenshot%202026-07-10%20163906.png)
 
 ### API & Database Testing
-![Testing 1](image-4.png)
-![Testing 2](image-5.png)
-![Testing 3](image-6.png)
-![Testing 4](image-7.png)
+![Testing 1](assets/image-4.png)
+![Testing 2](assets/image-5.png)
+![Testing 3](assets/image-6.png)
+![Testing 4](assets/image-7.png)
