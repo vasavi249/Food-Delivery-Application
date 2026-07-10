@@ -57,7 +57,3 @@ A complete, production-ready Full Stack Food Delivery Application exactly matchi
 ![alt text](<Screenshot 2026-07-10 154316-2.png>)
 ![alt text](<Screenshot 2026-07-10 154232-1.png>)
 ![alt text](<Screenshot 2026-07-10 163906.png>)
-![alt text](<Screenshot 2026-07-10 171340.png>)
-![alt text](<Screenshot 2026-07-10 171158.png>)
-![alt text](<Screenshot 2026-07-10 171340-1.png>)
-![alt text](<Screenshot 2026-07-10 171158.png>)
